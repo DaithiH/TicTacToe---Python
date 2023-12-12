@@ -71,17 +71,17 @@ class TicTacToe:
                     
         
     def is_winner(self):
-     # CHECK ROWS
+    # CHECK ROWS
         for row in self.board:
            if row[0] == row[1] == row[2] != " ":
                return True
         
-# CHECK COLUMNS
+    # CHECK COLUMNS
         for col in range(3):
             if self.board[0][col] == self.board[1][col] == self.board[2][col] != " ":
                 return True
             
-# CHECK DIAGONALS
+    # CHECK DIAGONALS
         if(self.board[0][0] == self.board[1][1] == self.board[2][2] != " " or  
            self.board[0][2] == self.board[1][1] == self.board[2][0]):
         
