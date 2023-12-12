@@ -106,7 +106,7 @@ class TicTacToe:
     
                
                
-       # DISLAY MESSAGES FOR A WIN OR TIED GAME
+    # DISLAY MESSAGES FOR A WIN OR TIED GAME
        
        
     def display_winner(self):
