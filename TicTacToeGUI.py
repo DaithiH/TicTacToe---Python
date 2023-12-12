@@ -4,8 +4,6 @@ Created on Wed Dec 6 18:40 2023
 
 @author: daveh
 
-Taken from Medium
-https://medium.com/@theethicsgeek/building-a-tic-tac-toe-game-with-python-and-tkinter-a-gui-based-journey-into-classic-fun-f2c96a8966eb
 
 """
 
