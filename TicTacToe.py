@@ -9,15 +9,7 @@ Created on Sat Nov 25 13:43:32 2023
 Second Attempt 
 """
 
-print("Welcome to my TicTacToe game!\n"
-      "Take your move by entering the number of the square where you "
-      "want to place your token.\n"
-      "The board is indexed as follows:\n"
-      " 1 | 2 | 3\n"
-      " 4 | 5 | 6\n"
-      " 7 | 8 | 9")
 
-board = [" " for x in range(9)]
 
 
 def game_board():
@@ -49,8 +41,7 @@ def player_turn(token):
     print(f"Your move player {player}")
     
    
-    #move = input("Place your token (1-9): ").strip()
-    #while move.isdigit():
+   
     while True:
         
         try:
@@ -99,32 +90,54 @@ def a_tie():
         return True
     else:
         return False
+
+def reset_board():
+    global board
+    board = [" " for x in range(9)]
+
+def play_again():
+    return input("Do you want to play again (y/n)?:").lower().startswith('y')
     
-    
+
+print("Welcome to my TicTacToe game!\n"
+      "Take your move by entering the number of the square where you "
+      "want to place your token.\n"
+      "The board is indexed as follows:\n"
+      " 1 | 2 | 3\n"
+      " 4 | 5 | 6\n"
+      " 7 | 8 | 9")    
                   
 while True:
-    game_board()
-    player_turn('X')
-    
-    game_board()
-    if is_winner("X"):
-        #game_board()
-        print("Player 1 wins!")
-        break
-    elif a_tie():
-        print("The game is tied!")
-        break
-    
-    player_turn('O')
-    
-    #game_board()
-    if is_winner("O"):
+    board = [" " for x in range(9)]
+    while True:
         game_board()
-        print("Player 2 wins!")
+        player_turn('X')
+    
+        if is_winner("X"):
+            print("Player 1 wins!")
+            break
+        elif a_tie():
+            print("The game is tied!")
+            break
+        
+        game_board()
+    
+        player_turn('O')
+    
+    
+        if is_winner("O"):
+            print("Player 2 wins!")
+            break
+        elif a_tie():
+            print("The game is tied!")
+            break
+    
+    if not play_again():
+        print('Thank you for playing!')
         break
-    elif a_tie():
-        print("The game is tied!")
-        break
+    else:
+        reset_board()
+        
     
     
   
