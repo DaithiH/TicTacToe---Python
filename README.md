@@ -8,8 +8,7 @@ from the keyboard.
 *TicTacToeGUI.py* was created using the *tkinter* package from the Python standard library.  
 This creates a GUI for the game, displaying an interactive board where players can take their  
 moves by clicking the position on the screen.  
-The GUI version of the game is still unfinished, as I have not yet added functionality to give players the  
-option to play again.
+The GUI version of the game is still unfinished, as I have not yet added functionality to give players the option to play again.
 
 
 
